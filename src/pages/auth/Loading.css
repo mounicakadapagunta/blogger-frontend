@@ -1,0 +1,29 @@
+.loading {
+    margin: 2rem auto;
+    height: calc(100vh - 45px);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Varela Round', san-serif;
+    padding-top: 2rem;
+}
+
+.link-container {
+    margin-top: 1rem;
+}
+
+.link-container p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #5d4954;
+}
+
+.link-container span {
+    margin-left: .4rem;
+}
+
+.activation-link {
+    font-size: 1.3rem;
+    color: var(--red-dark)
+}

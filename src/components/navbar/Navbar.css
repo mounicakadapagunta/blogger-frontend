@@ -1,0 +1,187 @@
+nav {
+    min-height: 12vh;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: #5d4954;
+}
+
+.logo {
+    color: #5d4954;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+
+.nav-links {
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 10vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    transform: translateY(-110%);
+    transition: transform 1s ease-in;
+    z-index: 10;
+}
+
+.links {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.links li {
+    opacity: 1;
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+.links-center {
+    height: 55%;
+}
+
+.links-right {
+    height: 25%;
+}
+
+.link {
+    color: #5d4954;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.links li {
+    list-style-type: none;
+}
+
+.burger>div {
+    background-color: #5d4954;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+}
+
+.logout-btn {
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: .4rem .8rem;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    transition: transform .5s ease;
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    transition: transform .5s ease;
+}
+
+.user-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid gold;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media(min-width: 768px) {
+    .logo {
+        margin-left: 1rem;
+        font-size: 1rem;
+        flex: 3;
+    }
+    .nav-links {
+        flex: 9;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        height: 10vh;
+        top: 0;
+        transform: none;
+    }
+    .links {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 0;
+    }
+    .links-center {
+        width: 55%;
+    }
+    .links-right {
+        width: 30%;
+    }
+    .burger {
+        display: none;
+    }
+    .nav-links li {
+        opacity: 1;
+    }
+    .link {
+        font-size: .85rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        margin-left: 1rem;
+        font-size: 1.4rem;
+        flex: 3;
+    }
+    .links-center {
+        width: 50%;
+    }
+    .links-right {
+        width: 25%;
+    }
+    .link {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .links-center {
+        width: 40%;
+    }
+    .links-right {
+        width: 20%;
+    }
+}
